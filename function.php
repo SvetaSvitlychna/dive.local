@@ -51,29 +51,5 @@ function login($email, $password){
 
 }
 
-function is_not_logged_in($data){
-
-    if(isset ($data) and $_SESSION['user'] ===false ){
-                  redirect_to("page_login.php");
-
-    }else{
-        if ($_SESSION["user"]["role"] == "admin"){
-           echo  "<a class=\"btn btn-success\" href=\"create_user.\">Добавить</a>";
-
-        }
-    }
-}
-function navigate_buttons($data){
-    if(isset ($data) and $_SESSION['user'] ===false ){
-        redirect_to("page_login.php");
-
-    }else{
-        if ($_SESSION["user"]["role"] == "admin"){
-
-            echo " <i class=\"fal fas fa-cog fa-fw d-inline-block ml-1 fs-md\"></i>
-                 <i class=\"fal fa-angle-down d-inline-block ml-1 fs-md\"></i>";
-        }
-    }
 
 
-}
